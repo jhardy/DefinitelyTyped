@@ -15,6 +15,8 @@ import {
     FontFamilyProps,
     textAlign,
     TextAlignProps,
+    textTransform,
+    TextTransformProps,
     background,
     BackgroundProps,
     maxWidth,
@@ -227,6 +229,7 @@ interface TextProps
     extends FontSizeProps,
         FontFamilyProps,
         TextAlignProps,
+        TextTransformProps,
         LineHeightProps,
         FontWeightProps,
         LetterSpacingProps {}
@@ -234,6 +237,7 @@ const Text: React.ComponentType<TextProps> = styled`
     ${fontSize};
     ${fontFamily};
     ${textAlign};
+    ${textTransform}
     ${lineHeight};
     ${fontWeight};
     ${letterSpacing};
@@ -354,6 +358,9 @@ const test = () => (
         // textAlign (responsive)
         <Text textAlign="center" />
         <Text textAlign={["center", "left"]} />
+        // textTransform (responsive)
+        <Text textTransform="uppercase" />
+        <Text textTransform={["uppercase", "lowercase"]} />
         // lineHeight
         <Text lineHeight="1.25" />
         // fontWeight

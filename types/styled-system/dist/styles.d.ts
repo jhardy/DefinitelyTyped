@@ -108,6 +108,26 @@ export interface TextAlignProps {
 
 export function textAlign(...args: any[]): any;
 
+export type TextTransformValue =
+    | GlobalStyleValues
+    | "capitalize"
+    | "lowercase"
+    | "none"
+    | "uppercase";
+export type ResponsiveTextTransformValue = ResponsiveValue<TextTransformValue>;
+
+export interface TextTransformProps {
+    /**
+     * The text-transform CSS property specifies how to capitalize an element's text. It can be used to
+     * make text appear in all-uppercase or all-lowercase, or with each word capitalized.
+     *
+     * [MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform)
+     */
+    textTransform?: ResponsiveTextTransformValue;
+}
+
+export function textTransform(...args: any[]): any;
+
 export type LineHeightValue = number | string;
 export type ResponsiveLineHeightValue = ResponsiveValue<LineHeightValue>;
 export interface LineHeightProps {
