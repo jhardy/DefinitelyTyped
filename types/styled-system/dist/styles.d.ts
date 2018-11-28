@@ -88,6 +88,18 @@ export interface TextAlignProps {
 
 export function textAlign(...args: any[]): any;
 
+export interface TextTransformProps {
+    /**
+     * The text-transform CSS property specifies how to capitalize an element's text. It can be used to make text
+     * appear in all-uppercase or all-lowercase, or with each word capitalized.
+     *
+     * [MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform)
+     */
+    textTransform?: ResponsiveValue<CSS.TextTransformProperty>;
+}
+
+export function textAlign(...args: any[]): any;
+
 export interface LineHeightProps<TLength = TLengthStyledSystem> {
     /**
      * The line-height CSS property sets the amount of space used for lines, such as in text. On block-level elements,
